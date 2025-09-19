@@ -70,6 +70,39 @@ function sum(a, b, c) {
 
 sum(1, 2); // Only two arguments passed
 ```
+### arguments Object (Old Way, Non-Arrow Functions)
+
+Every normal function (not an arrow function) has access to an arguments object that holds all arguments passed to it.
+
+```javascript
+function showArgs(a, b) {
+  console.log(a, b);         // Prints first two arguments
+  console.log(arguments);    // Prints all arguments as an array-like object
+}
+
+showArgs(1, 2, 3, 4);
+// Output:
+// 1 2
+// [Arguments] { '0': 1, '1': 2, '2': 3, '3': 4 }
+
+```
+How to Access Remaining value passed as an arguments.
+```javascript
+function showArgs(a, b) {
+  console.log("3rd argument:", arguments[2]);
+  console.log("4th argument:", arguments[3]);
+}
+
+showArgs(1, 2, 3, 4);
+```
+
+✅ Key points:
+
+- arguments is array-like (has length, can be indexed), but not a real array.
+
+- Works only in regular functions, not arrow functions.
+
+- Often used for variadic functions (functions that take any number of arguments).
 
 ### Default Parameters
 Default parameters allow you to set default values for parameters if no argument is provided or if `undefined` is passed.
