@@ -203,8 +203,6 @@ var sayHi = function() {
 
 ## Interview Explanations
 
-Here are simple, easy-to-understand definitions for each topic, perfect for interviews:
-
 ### 1. Ways to Write Functions
 Functions in JavaScript can be created in different styles:
 - **Function Declaration**: A standard way to define a function using the `function` keyword, which can be called before it is defined due to hoisting.
