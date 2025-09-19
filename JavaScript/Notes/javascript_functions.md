@@ -1,4 +1,4 @@
-# JavaScript Functions and Objects
+# JavaScript Functions
 
 ## 1. Ways to Write Functions
 
