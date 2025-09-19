@@ -199,6 +199,100 @@ var sayHi = function() {
 
 ![Lexical Scope Diagram](./GEC%20Image.png)
 
+---
+
+## Interview Explanations
+
+Here are simple, easy-to-understand definitions for each topic, perfect for interviews:
+
+### 1. Ways to Write Functions
+Functions in JavaScript can be created in different styles:
+- **Function Declaration**: A standard way to define a function using the `function` keyword, which can be called before it is defined due to hoisting.
+- **Function Expression**: Assigning a function to a variable, which isn't hoisted and must be defined before use.
+- **Arrow Function**: A shorter syntax using `=>`, great for simple functions and doesn't have its own `this`.
+- **Named Function Expression**: A function expression with a name, useful for debugging.
+- **IIFE (Immediately Invoked Function Expression)**: A function that runs right after it's defined, often used to create a private scope.
+
+### 2. Function Parameters and Arguments
+- **Parameters**: The names listed in the function definition, like placeholders for values.
+- **Arguments**: The actual values you pass when calling the function.
+JavaScript is flexible: you can pass more or fewer arguments than parameters. Use `arguments` object (in regular functions) for extra args, or default parameters to set fallbacks.
+
+### 3. Scope of Function
+Scope determines where variables are accessible:
+- **Global Scope**: Variables available everywhere in the code.
+- **Function Scope**: Variables inside a function, only accessible there.
+- **Block Scope**: Variables with `let` or `const` inside `{}` blocks, limited to that block.
+
+### 4. What is Hoisting?
+- Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top. 
+- This means that irrespective of where the variables and functions are declared, they are moved on top of the scope.
+- Whenever javascript code is executed, a GEC (global execution context) is created and there is two phase memory and execution phase . 
+- In the memory phase all the variables are declared undefined and all functions will be stored as an entire function; this phenomenon is known as hoisting.
+Example : 
+``` javascript
+hoistedVariable = 3;
+console.log(hoistedVariable); // outputs 3 even when the variable is declared after it is initialized	
+var hoistedVariable;
+Note - Variable initializations are not hoisted, only variable declarations are hoisted:
+Example:
+var x;
+console.log(x); // Outputs "undefined" since the initialization of "x" is not hoisted
+x = 23;
+```
+
+### 5. Difference between var, let and const.
+
+	
+#### Var : 
+- Function Scope: Variables declared with var are function-scoped. This means if we declare a variable inside a function, it is only accessible within that function, but if it’s declared outside a function, it’s available  globally.
+- Hoisting: when we use var, javascript hoists the variable to the top of its scope. This means we can use a variable before it’s declared, but the value will be undefined until the line where the variable is initialized.
+- Re -declaration and Re-initialization possible.
+
+#### Let :
+- let is Block scoped.
+- Re-declaration is not possible, but Re-initialization is possible.
+- let variables are also hoisted, but not accessible before declaration (TDZ).
+- Both var and let initialised as undefined in memory phase.
+- But var is stored in global scope
+- let is stored in script (memory object).
+Temporal Dead Zone (TDZ) : Time since when the let variable are hoisted until it is initialized with some value.
+
+
+#### const :
+- Block scope
+- Const should be always initialised with some value 
+- const variables are also hoisted but they are not initialised until the                             code reaches the line where let is declared.
+- Re-declaration is not possible
+
+
+### 6. Is javascript a statically typed or a dynamically typed language?
+
+- JavaScript is a dynamically typed language. 
+- In a dynamically typed language, the type of a variable is checked during run-time in contrast to a statically typed language, where the type of a variable is checked during compile-time.
+- A variable's type can change at runtime.
+
+### 7. What are the different data types present in javascript?
+
+JavaScript has two categories of data types:
+
+#### 1. Primitive Types  
+Holds a single value:  
+- **String**  
+- **Number**  
+- **BigInt**  
+- **Undefined**  
+- **Null**  
+- **Symbol**
+
+#### 2. Non-Primitive Types  
+Holds multiple values:  
+- **Object**  
+- **Array**  
+- **Function**  
+- **Date**  
+- **Map**  
+- **Set**
 
 
 ---

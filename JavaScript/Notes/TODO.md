@@ -1,0 +1,1 @@
+- [x] Add "Interview Explanations" section to javascript_functions.md with simple definitions for each topic
