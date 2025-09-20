@@ -228,6 +228,72 @@ tasks.forEach((task, index) => {
 });
 ```
 
+**splice() - Remove/Replace Elements**
+```javascript
+const fruits = ['apple', 'banana', 'orange', 'grape'];
+
+// Remove 2 elements starting from index 1
+const removed = fruits.splice(1, 2); // ['banana', 'orange']
+console.log(fruits); // ['apple', 'grape']
+
+// Replace elements
+const numbers = [1, 2, 3, 4, 5];
+const replaced = numbers.splice(2, 2, 'a', 'b'); // [3, 4]
+console.log(numbers); // [1, 2, 'a', 'b', 5]
+
+// Insert elements without removing
+const colors = ['red', 'blue'];
+colors.splice(1, 0, 'green', 'yellow'); // []
+console.log(colors); // ['red', 'green', 'yellow', 'blue']
+```
+
+
+**slice() - Extract Array Portion**
+
+```javascript
+
+const fruits = ['apple', 'banana', 'orange', 'grape', 'mango'];
+
+// Extract from index 1 to 3 (not including 3)
+const citrus = fruits.slice(1, 3); // ['banana', 'orange']
+console.log(fruits); // ['apple', 'banana', 'orange', 'grape', 'mango'] (unchanged)
+
+// Extract from index 2 to end
+const fromOrange = fruits.slice(2); // ['orange', 'grape', 'mango']
+
+// Extract last 2 elements
+const lastTwo = fruits.slice(-2); // ['grape', 'mango']
+
+// Copy entire array
+const copy = fruits.slice(); // ['apple', 'banana', 'orange', 'grape', 'mango']
+
+// Real-world example: Get first n elements
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const firstFive = numbers.slice(0, 5); // [1, 2, 3, 4, 5]
+
+```
+**Array.isArray() - Check if Value is Array**
+```javascript
+// Check if value is an array
+console.log(Array.isArray([])); // true
+console.log(Array.isArray({})); // false
+console.log(Array.isArray('hello')); // false
+console.log(Array.isArray([1, 2, 3])); // true
+
+// Real-world example: Safe array checking
+function processData(data) {
+  if (Array.isArray(data)) {
+    return data.map(item => item * 2);
+  } else {
+    console.log('Data is not an array');
+    return [];
+  }
+}
+
+console.log(processData([1, 2, 3])); // [2, 4, 6]
+console.log(processData('hello')); // 'Data is not an array' + []
+```
+
 ---
 
 ## 🔄 Spread & Rest Operators
