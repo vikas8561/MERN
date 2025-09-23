@@ -14,7 +14,7 @@ An object in JavaScript is a collection of key-value pairs, similar to a diction
 
 ---
 
-## 🏗️ Key-Value Pairs
+## Key-Value Pairs
 
 #### Creating Objects
 
@@ -78,7 +78,7 @@ console.log(person[propertyName]); // 30
 
 ---
 
-## 📍 Dot vs Bracket Notation
+##  Dot vs Bracket Notation
 
 #### Dot Notation (.)
 
@@ -89,11 +89,11 @@ const person = {
   city: 'New York'
 };
 
-// ✅ Use dot notation when:
+// Use dot notation when:
 console.log(person.name);    // Property name is known and valid identifier
 console.log(person.city);    // Simple property access
 
-// ❌ Cannot use dot notation for:
+// Cannot use dot notation for:
 console.log(person.favorite color); // SyntaxError - space in property name
 console.log(person['age']);         // Must use brackets for dynamic access
 ```
