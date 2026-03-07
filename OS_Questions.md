@@ -475,7 +475,3 @@
 350. What is the difference between static and dynamic loading?
 
 ---
-
-*Total Questions: 350*
-*Syllabus: Operating Systems | B.Tech CSE Semester 4*
-*Units Covered: 1 (Introduction), 2 (Process Management), 3 (Deadlock), 4 (Memory Management), 5 (Unix/Linux)*
